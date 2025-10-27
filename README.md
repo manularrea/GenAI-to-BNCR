@@ -1,261 +1,347 @@
-# GenAI Applied to Banking - Azure OpenAI Labs
+# Generative AI for Banking Sector - BNCR Training Course
+
+![Course Banner](https://img.shields.io/badge/Azure-OpenAI-blue) ![Python](https://img.shields.io/badge/Python-3.11-green) ![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
 
 **Course:** Generative AI Applied to Banking with Azure  
 **Institution:** Banco Nacional de Costa Rica (BNCR)  
 **Duration:** 20 sessions (60 hours total)  
 **Schedule:** Tuesday - Friday, 10:00 AM - 1:00 PM (CR Time)  
-**Dates:** October 21 - November 21, 2025
+**Dates:** October 21 - November 21, 2025  
+**Instructor:** Manuela Larrea (manuela.larrea@idataglobal.com)
 
 ---
 
-## 📚 Course Overview
+## 📋 Course Overview
 
-This repository contains hands-on laboratory exercises for learning Generative AI technologies applied to the banking sector using Microsoft Azure services. The course covers everything from foundational concepts to production-ready applications.
+This repository contains comprehensive training materials for implementing Generative AI solutions in the banking sector using Microsoft Azure services. The course combines theoretical foundations with extensive hands-on practice, covering everything from basic concepts to production-ready applications.
 
 ### **Learning Objectives**
 
-By the end of this course, students will be able to:
+By the end of this course, participants will be able to:
 
-- ✅ Understand foundational concepts of Generative AI and Large Language Models
-- ✅ Implement Azure OpenAI Service in banking use cases
-- ✅ Build RAG (Retrieval Augmented Generation) systems for document analysis
-- ✅ Develop AI-powered applications for fraud detection, customer service, and compliance
-- ✅ Deploy production-ready AI solutions using Azure services
-- ✅ Apply best practices for security, cost optimization, and responsible AI
+1. ✅ Design and implement intelligent banking chatbots
+2. ✅ Integrate Azure OpenAI with existing banking systems
+3. ✅ Build RAG (Retrieval-Augmented Generation) systems for knowledge bases
+4. ✅ Apply advanced prompt engineering techniques
+5. ✅ Deploy GenAI solutions to production on Azure
+6. ✅ Implement security, content moderation, and compliance
+7. ✅ Optimize costs and performance of GenAI applications
+8. ✅ Evaluate and continuously improve AI systems
 
 ---
 
-## 🏗️ Repository Structure
+## 🗂️ Repository Structure
 
-\`\`\`
+```
 GenAI-to-BNCR/
-├── labs/                    # Laboratory exercises (Lab 05-20)
-│   ├── lab05/              # First Steps with Azure OpenAI
-│   ├── lab06/              # Prompt Engineering Fundamentals
-│   ├── lab07/              # Advanced Prompting Techniques
-│   ├── lab08/              # Function Calling & Tools
-│   ├── lab09/              # Embeddings & Semantic Search
-│   ├── lab10/              # RAG: Document Q&A System
-│   ├── lab11/              # RAG: Multi-Document Analysis
-│   ├── lab12/              # RAG: Production Optimization
-│   ├── lab13/              # Computer Vision for Banking
-│   ├── lab14/              # Form Processing & OCR
-│   ├── lab15/              # Sentiment Analysis & NLP
-│   ├── lab16/              # Building AI APIs with Functions
-│   ├── lab17/              # Deploying Web Applications
-│   ├── lab18/              # Fraud Detection System
-│   ├── lab19/              # Compliance & Regulatory Reporting
-│   └── lab20/              # Final Project: Integrated Banking AI
-├── datasets/               # Sample datasets for exercises
-│   └── banking/           # Banking-specific datasets
-├── docs/                   # Documentation and diagrams
-│   └── diagrams/          # Infrastructure diagrams
-├── utils/                  # Utility functions and helpers
-├── .github/workflows/      # CI/CD pipelines
-├── .gitignore             # Git ignore file
-├── requirements.txt        # Python dependencies
-└── README.md              # This file
-\`\`\`
-
----
-
-## 🚀 Getting Started
-
-### **Prerequisites**
-
-- Python 3.11+
-- Jupyter Lab or Jupyter Notebook
-- Azure subscription with access to:
-  - Azure OpenAI Service
-  - Azure AI Search
-  - Azure SQL Database
-  - Azure Storage Account
-  - Azure AI Services
-
-### **Installation**
-
-1. **Clone the repository:**
-   \`\`\`bash
-   git clone https://github.com/manularrea/GenAI-to-BNCR.git
-   cd GenAI-to-BNCR
-   \`\`\`
-
-2. **Create a virtual environment:**
-   \`\`\`bash
-   python3.11 -m venv venv
-   source venv/bin/activate  # On Windows: venv\\Scripts\\activate
-   \`\`\`
-
-3. **Install dependencies:**
-   \`\`\`bash
-   pip install -r requirements.txt
-   \`\`\`
-
-4. **Configure Azure credentials:**
-   
-   Create a \`.env\` file in the root directory:
-   \`\`\`env
-   # Azure OpenAI
-   AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
-   AZURE_OPENAI_API_KEY=your-api-key
-   AZURE_OPENAI_DEPLOYMENT_GPT4=gpt-4
-   AZURE_OPENAI_DEPLOYMENT_GPT35=gpt-35-turbo
-   AZURE_OPENAI_DEPLOYMENT_EMBEDDING=text-embedding-ada-002
-   
-   # Azure AI Search
-   AZURE_SEARCH_ENDPOINT=https://your-search.search.windows.net
-   AZURE_SEARCH_API_KEY=your-search-key
-   
-   # Azure SQL Database
-   AZURE_SQL_CONNECTION_STRING=your-connection-string
-   
-   # Azure Storage
-   AZURE_STORAGE_CONNECTION_STRING=your-storage-connection-string
-   \`\`\`
-
-5. **Launch Jupyter Lab:**
-   \`\`\`bash
-   jupyter lab
-   \`\`\`
+├── README.md                          # This file
+├── INSTRUCTOR_GUIDE.md                # Complete guide for instructors
+├── requirements.txt                   # Python dependencies
+├── .env.example                       # Configuration template
+├── .gitignore                        # Git ignore rules
+│
+├── datasets/                          # Banking sample data
+│   ├── README.md
+│   └── banking/
+│       ├── banking_products.csv       # Banking products
+│       ├── transactions.csv           # Sample transactions
+│       └── banking_faq.csv           # Frequently asked questions
+│
+├── utils/                             # Shared utilities
+│   ├── __init__.py
+│   ├── azure_openai_helper.py        # Azure OpenAI client
+│   └── infrastructure_diagrams.py     # Diagram generator
+│
+├── labs/                              # Laboratory notebooks
+│   ├── lab05/                         # Azure OpenAI Basics
+│   ├── lab06/                         # Prompt Engineering
+│   ├── lab07/                         # Conversation Management
+│   ├── lab08/                         # Function Calling
+│   ├── lab09/                         # Embeddings & Semantic Search
+│   ├── lab10/                         # RAG Implementation
+│   ├── lab11/                         # Azure AI Search Integration
+│   ├── lab12/                         # Content Moderation & Safety
+│   ├── lab13/                         # Fine-tuning for Banking
+│   ├── lab14/                         # Multimodal AI - Vision
+│   ├── lab15/                         # Agent Frameworks & LangChain
+│   ├── lab16/                         # Production Deployment
+│   ├── lab17/                         # Testing & Evaluation
+│   ├── lab18/                         # Ethics, Bias & Responsible AI
+│   ├── lab19/                         # Cost Optimization
+│   └── lab20/                         # Final Project
+│
+├── presentations/                     # Presentation materials
+│   ├── MASTER_PRESENTATIONS_OUTLINE.md
+│   └── class06-20/                   # Slides per class
+│
+└── scripts/                           # Utility scripts
+    └── setup_environment.sh           # Initial setup
+```
 
 ---
 
 ## 📖 Course Schedule
 
 ### **Module 1: Introduction to GenAI (Sessions 1-4)**
-- Session 1-3: Theoretical foundations (no labs)
-- Session 4: Introduction to Azure OpenAI (demos only)
+*Theoretical foundations - materials not included in this repository*
 
 ### **Module 2: Azure OpenAI Fundamentals (Sessions 5-9)**
-- **Lab 05:** First Steps with Azure OpenAI
-- **Lab 06:** Prompt Engineering Fundamentals
-- **Lab 07:** Advanced Prompting Techniques
-- **Lab 08:** Function Calling & Tools
-- **Lab 09:** Embeddings & Semantic Search
 
-### **Module 3: RAG Systems (Sessions 10-12)**
-- **Lab 10:** RAG: Document Q&A System
-- **Lab 11:** RAG: Multi-Document Analysis
-- **Lab 12:** RAG: Production Optimization
+| Session | Topic | Lab | Duration |
+|---------|-------|-----|----------|
+| **05** | First Steps with Azure OpenAI | Lab 05 | 3h |
+| **06** | Prompt Engineering for Banking | Lab 06 | 3h |
+| **07** | Advanced Conversation Management | Lab 07 | 3h |
+| **08** | Function Calling & Tool Integration | Lab 08 | 3h |
+| **09** | Embeddings & Semantic Search | Lab 09 | 3h |
 
-### **Module 4: Azure AI Services (Sessions 13-15)**
-- **Lab 13:** Computer Vision for Banking
-- **Lab 14:** Form Processing & OCR
-- **Lab 15:** Sentiment Analysis & NLP
+### **Module 3: RAG & Knowledge Systems (Sessions 10-12)**
 
-### **Module 5: Production Applications (Sessions 16-20)**
-- **Lab 16:** Building AI APIs with Azure Functions
-- **Lab 17:** Deploying Web Applications
-- **Lab 18:** Fraud Detection System
-- **Lab 19:** Compliance & Regulatory Reporting
-- **Lab 20:** Final Project: Integrated Banking AI
+| Session | Topic | Lab | Duration |
+|---------|-------|-----|----------|
+| **10** | RAG (Retrieval-Augmented Generation) | Lab 10 | 3h |
+| **11** | Azure AI Search Integration | Lab 11 | 3h |
+| **12** | Content Moderation & Safety | Lab 12 | 3h |
+
+### **Module 4: Advanced AI Capabilities (Sessions 13-15)**
+
+| Session | Topic | Lab | Duration |
+|---------|-------|-----|----------|
+| **13** | Fine-tuning for Banking Domain | Lab 13 | 3h |
+| **14** | Multimodal AI - Vision & Documents | Lab 14 | 3h |
+| **15** | Agent Frameworks & LangChain | Lab 15 | 3h |
+
+### **Module 5: Production & Best Practices (Sessions 16-20)**
+
+| Session | Topic | Lab | Duration |
+|---------|-------|-----|----------|
+| **16** | Production Deployment on Azure | Lab 16 | 3h |
+| **17** | Testing & Evaluation | Lab 17 | 3h |
+| **18** | Ethics, Bias & Responsible AI | Lab 18 | 3h |
+| **19** | Cost Optimization & Performance | Lab 19 | 3h |
+| **20** | Final Project - Banking AI Assistant | Lab 20 | 3h |
+
+---
+
+## 🚀 Quick Start
+
+### **Prerequisites**
+
+- Python 3.11 or higher
+- Jupyter Lab or VS Code with Jupyter extension
+- Git installed
+- Azure account with access to Azure OpenAI
+
+### **Installation**
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/manularrea/GenAI-to-BNCR.git
+cd GenAI-to-BNCR
+```
+
+2. **Create virtual environment:**
+```bash
+python3.11 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. **Install dependencies:**
+```bash
+pip install -r requirements.txt
+```
+
+4. **Configure environment variables:**
+```bash
+cp .env.example .env
+# Edit .env with your Azure OpenAI credentials
+```
+
+5. **Launch Jupyter Lab:**
+```bash
+jupyter lab
+```
+
+6. **Open first notebook:**
+Navigate to `labs/lab05/lab05_azure_openai_basics.ipynb`
+
+---
+
+## 🔑 Azure OpenAI Configuration
+
+### Get Credentials
+
+1. Go to [Azure Portal](https://portal.azure.com)
+2. Navigate to your Azure OpenAI resource
+3. In "Keys and Endpoint", copy:
+   - API Key
+   - Endpoint
+   - Deployment names
+
+### Configure `.env`
+
+```env
+# Azure OpenAI Configuration
+AZURE_OPENAI_API_KEY=your_api_key_here
+AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
+AZURE_OPENAI_API_VERSION=2024-02-15-preview
+
+# Deployment Names
+AZURE_OPENAI_GPT4_DEPLOYMENT=gpt-4
+AZURE_OPENAI_GPT35_DEPLOYMENT=gpt-35-turbo
+AZURE_OPENAI_EMBEDDING_DEPLOYMENT=text-embedding-ada-002
+```
 
 ---
 
 ## 🏦 Banking Use Cases Covered
 
-1. **Customer Service Automation**
-   - Intelligent chatbots with context awareness
-   - Multi-language support
-   - Sentiment analysis
+### 1. **Customer Service Chatbot**
+- Answer product inquiries
+- Handle information requests
+- Intelligent escalation to human agents
 
-2. **Fraud Detection**
-   - Transaction pattern analysis
-   - Anomaly detection
-   - Real-time alerts
+### 2. **Loan Application Assistant**
+- Assess eligibility
+- Collect applicant information
+- Generate pre-approvals
 
-3. **Document Processing**
-   - Loan application analysis
-   - KYC (Know Your Customer) automation
-   - Contract review
+### 3. **Document Search System**
+- Internal policies and procedures
+- Product documentation
+- Regulations and compliance
 
-4. **Regulatory Compliance**
-   - Automated reporting to SUGEF
-   - AML (Anti-Money Laundering) monitoring
-   - Risk assessment
+### 4. **Document Analysis**
+- Check processing
+- Form data extraction
+- Financial statement analysis
 
-5. **Credit Scoring**
-   - Alternative data analysis
-   - Explainable AI models
-   - Risk profiling
+### 5. **Fraud Detection**
+- Transaction pattern analysis
+- Suspicious activity identification
+- Real-time alerts
 
 ---
 
-## 🛠️ Technologies Used
+## 💻 Technologies Used
 
 ### **Azure Services**
-- Azure OpenAI Service (GPT-4, GPT-3.5, Embeddings)
-- Azure AI Search (Semantic search, Vector search)
-- Azure AI Services (Computer Vision, Form Recognizer, Language)
-- Azure SQL Database
-- Azure Storage Account
-- Azure Functions
-- Azure App Service
-- Azure Key Vault
+- **Azure OpenAI Service** - GPT-4, GPT-3.5, Embeddings
+- **Azure AI Search** - Enterprise search capabilities
+- **Azure Content Safety** - Content moderation
+- **Azure API Management** - API governance
 
 ### **Python Libraries**
-- \`openai\` - Azure OpenAI SDK
-- \`langchain\` - LLM application framework
-- \`azure-search-documents\` - Azure AI Search SDK
-- \`azure-ai-formrecognizer\` - Form processing
-- \`pandas\` - Data manipulation
-- \`numpy\` - Numerical computing
-- \`matplotlib\` / \`seaborn\` - Data visualization
-- \`fastapi\` - API development
-- \`streamlit\` - Web app development
-
----
-
-## 📊 Datasets
-
-All datasets used in this course are either:
-- Publicly available open-source datasets
-- Synthetic data generated for educational purposes
-- Anonymized and compliant with data protection regulations
-
-**Available datasets:**
-- \`customer_transactions.csv\` - Sample banking transactions
-- \`loan_applications.json\` - Loan application documents
-- \`customer_support_tickets.csv\` - Support conversation history
-- \`regulatory_documents/\` - Sample compliance documents
-- \`fraud_patterns.csv\` - Historical fraud cases (synthetic)
+- `openai` - Official OpenAI client
+- `python-dotenv` - Environment variable management
+- `pandas` - Data manipulation
+- `numpy` - Numerical operations
+- `langchain` - Agent framework (Labs 15+)
+- `chromadb` - Vector database (Lab 10)
+- `azure-ai-search` - Azure Cognitive Search (Lab 11)
 
 ---
 
 ## 🔒 Security & Best Practices
 
-### **Credential Management**
-- ✅ Never commit \`.env\` files or API keys to the repository
-- ✅ Use Azure Key Vault for production secrets
-- ✅ Rotate API keys regularly
-- ✅ Use managed identities when possible
+### **Implemented Best Practices**
 
-### **Data Privacy**
-- ✅ All datasets are anonymized
-- ✅ No real customer data is used
-- ✅ Comply with GDPR and local regulations
+✅ **Never** include sensitive data in prompts  
+✅ **Always** use environment variables for credentials  
+✅ **Implement** content moderation  
+✅ **Validate** all user inputs  
+✅ **Log** all interactions for auditing  
+✅ **Encrypt** data in transit and at rest  
+✅ **Limit** access based on roles  
+✅ **Monitor** usage and costs continuously
 
-### **Cost Optimization**
-- ✅ Use GPT-3.5 for development and testing
-- ✅ Implement caching strategies
-- ✅ Monitor token usage
-- ✅ Set spending limits
+### **Banking Compliance**
 
-### **Responsible AI**
-- ✅ Implement content filtering
-- ✅ Monitor for bias
-- ✅ Provide transparency to end users
-- ✅ Human oversight for critical decisions
+- **GDPR** - Personal data protection
+- **PCI DSS** - Card data security
+- **SOC 2** - Security controls
+- **Local regulations** - Costa Rica banking laws
+
+---
+
+## 💰 Cost Estimation
+
+### Azure OpenAI Pricing (Approximate)
+
+| Model | Input (1K tokens) | Output (1K tokens) | Typical Lab Cost |
+|-------|-------------------|--------------------| -----------------|
+| GPT-4 | $0.03 | $0.06 | ~$2-5 |
+| GPT-3.5 Turbo | $0.0005 | $0.0015 | ~$0.50-1 |
+| Embeddings | $0.0001 | N/A | ~$0.10-0.50 |
+
+**Estimated cost per student for entire course:** $50-100 USD
+
+### Cost Optimization
+
+- Use GPT-3.5 for development and testing
+- Implement caching for repeated queries
+- Limit max_tokens in responses
+- Use batch processing when possible
+- Monitor usage with Azure Cost Management
+
+---
+
+## 📚 Additional Resources
+
+### **Official Documentation**
+- [Azure OpenAI Documentation](https://learn.microsoft.com/azure/ai-services/openai/)
+- [OpenAI API Reference](https://platform.openai.com/docs/api-reference)
+- [LangChain Documentation](https://python.langchain.com/)
+
+### **Tutorials & Guides**
+- [Azure OpenAI Quickstart](https://learn.microsoft.com/azure/ai-services/openai/quickstart)
+- [Prompt Engineering Guide](https://www.promptingguide.ai/)
+- [RAG Best Practices](https://python.langchain.com/docs/use_cases/question_answering/)
+
+### **Community**
+- [Azure OpenAI Samples](https://github.com/Azure-Samples/openai)
+- [OpenAI Community Forum](https://community.openai.com/)
+- [Stack Overflow - Azure OpenAI](https://stackoverflow.com/questions/tagged/azure-openai)
+
+---
+
+## 🐛 Troubleshooting
+
+### Error: "Authentication failed"
+```bash
+# Verify .env has correct credentials
+cat .env
+# Verify variables are loaded
+python -c "from dotenv import load_dotenv; import os; load_dotenv(); print(os.getenv('AZURE_OPENAI_API_KEY'))"
+```
+
+### Error: "Rate limit exceeded"
+```bash
+# Wait 60 seconds and retry
+# Or configure retry logic in code
+```
+
+### Error: "Module not found"
+```bash
+# Reinstall dependencies
+pip install -r requirements.txt --upgrade
+```
+
+### Notebook won't connect
+```bash
+# Verify kernel
+jupyter kernelspec list
+# Reinstall kernel if needed
+python -m ipykernel install --user --name=venv
+```
 
 ---
 
 ## 📈 Infrastructure Overview
 
-Each lab includes a diagram showing the Azure infrastructure being used. Here's the overall architecture:
-
-\`\`\`
+```
 ┌─────────────────────────────────────────────────────────────┐
-│                     Students (Jupyter Lab)                   │
+│                  Students (Jupyter Lab)                      │
 └──────────────────────┬──────────────────────────────────────┘
                        │
                        ├─────────► Azure OpenAI Service
@@ -266,71 +352,88 @@ Each lab includes a diagram showing the Azure infrastructure being used. Here's 
                        ├─────────► Azure AI Search
                        │            └─ Vector + Semantic Search
                        │
-                       ├─────────► Azure SQL Database
-                       │            └─ Structured Data
-                       │
-                       ├─────────► Azure Storage Account
-                       │            └─ Documents & Files
-                       │
-                       ├─────────► Azure AI Services
-                       │            ├─ Computer Vision
-                       │            ├─ Form Recognizer
-                       │            └─ Language Service
+                       ├─────────► Azure Content Safety
+                       │            └─ Content Moderation
                        │
                        └─────────► Azure Key Vault
                                     └─ Secrets Management
-\`\`\`
-
----
-
-## 🎓 Learning Path
-
-### **Beginner (Sessions 5-9)**
-Start with basic Azure OpenAI interactions, learn prompt engineering, and understand embeddings.
-
-### **Intermediate (Sessions 10-15)**
-Build RAG systems, integrate multiple Azure AI services, and process complex documents.
-
-### **Advanced (Sessions 16-20)**
-Deploy production applications, implement fraud detection, and create integrated banking solutions.
+```
 
 ---
 
 ## 🤝 Contributing
 
-This repository is maintained for educational purposes. If you find issues or have suggestions:
+This repository is specific to the BNCR course. For suggestions or improvements:
 
-1. Open an issue describing the problem or enhancement
-2. Submit a pull request with your proposed changes
-3. Ensure all code follows PEP 8 style guidelines
-4. Add tests for new functionality
-
----
-
-## 📞 Support
-
-For questions or issues during the course:
-
-- **Instructor:** Manuela Larrea Gomez
-- **Institution:** Banco Nacional de Costa Rica (BNCR)
-- **GitHub Issues:** Use the Issues tab for technical questions
+1. Create an issue describing the improvement
+2. Contact instructor: manuela.larrea@idataglobal.com
+3. For major changes, discuss with BNCR team first
 
 ---
 
-## 📄 License
+## 📝 License
 
-This educational material is provided for the exclusive use of BNCR course participants. All rights reserved.
+This material is property of **iData Global** and is licensed exclusively for use by **Banco Nacional de Costa Rica (BNCR)** for internal training purposes.
 
----
-
-## 🙏 Acknowledgments
-
-- Microsoft Azure for providing cloud infrastructure
-- OpenAI for foundational AI models
-- BNCR for supporting AI education and innovation
-- All open-source contributors whose libraries make this course possible
+**Prohibited:**
+- Distribution outside BNCR
+- Commercial use without authorization
+- Modification without approval
 
 ---
 
-**Last Updated:** October 2025  
+## 👥 Contact
+
+**Lead Instructor:**  
+Manuela Larrea  
+Email: manuela.larrea@idataglobal.com
+
+**Organization:**  
+iData Global  
+Website: https://idataglobal.com
+
+**Client:**  
+Banco Nacional de Costa Rica (BNCR)
+
+---
+
+## 🎉 Acknowledgments
+
+Special thanks to:
+- BNCR team for their collaboration
+- Microsoft Azure for the platform
+- OpenAI for language models
+- Open-source community for tools
+
+---
+
+## 📅 Version History
+
+### v1.0.0 (2024-01-27)
+- ✅ Complete repository structure
+- ✅ 16 laboratory notebooks (Labs 05-20)
+- ✅ Shared utilities and helpers
+- ✅ Banking sample datasets
+- ✅ Complete documentation
+- ✅ Instructor guide
+- ✅ Presentation templates
+
+---
+
+## 🚀 Next Steps
+
+After completing this course, participants can:
+
+1. **Implement** GenAI solutions in production at BNCR
+2. **Explore** additional specific use cases
+3. **Optimize** existing systems with AI
+4. **Train** other internal teams
+5. **Innovate** with new GenAI applications
+
+---
+
+**Welcome to the future of banking with Generative AI!** 🚀🏦
+
+**Last Updated:** January 2025  
 **Version:** 1.0.0
+
