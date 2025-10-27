@@ -1,0 +1,17 @@
+product_id,product_name,product_type,description,interest_rate,minimum_balance,monthly_fee,features
+P001,Cuenta Ahorro Básica,Savings Account,Cuenta de ahorros básica para clientes individuales con acceso a banca en línea y tarjeta de débito.,0.5,500,0,"Banca en línea, Tarjeta débito, Sin comisiones"
+P002,Cuenta Corriente Premium,Checking Account,Cuenta corriente con beneficios premium incluyendo chequera ilimitada y asesoría financiera.,0.1,5000,15,"Chequera ilimitada, Asesoría financiera, Seguros incluidos"
+P003,Cuenta Ahorro Joven,Savings Account,Cuenta de ahorros especial para jóvenes entre 18-25 años con tasas preferenciales.,1.5,100,0,"Sin comisiones, Tasa preferencial, App móvil"
+P004,Depósito a Plazo 12 meses,Fixed Deposit,Certificado de depósito a plazo fijo de 12 meses con tasa garantizada.,4.5,10000,0,"Tasa garantizada, Renovación automática, Liquidez anticipada"
+P005,Depósito a Plazo 24 meses,Fixed Deposit,Certificado de depósito a plazo fijo de 24 meses con tasa premium.,5.2,10000,0,"Tasa premium, Renovación automática, Liquidez anticipada"
+P006,Tarjeta Crédito Clásica,Credit Card,Tarjeta de crédito básica con límite estándar y programa de puntos.,18.5,0,10,"Programa de puntos, Compras en línea, Seguros básicos"
+P007,Tarjeta Crédito Oro,Credit Card,Tarjeta de crédito oro con límite elevado y beneficios exclusivos.,16.5,0,25,"Lounge aeropuerto, Seguros premium, Cashback 2%"
+P008,Tarjeta Crédito Platinum,Credit Card,Tarjeta de crédito platinum con límite alto y concierge 24/7.,15.0,0,50,"Concierge 24/7, Seguros completos, Cashback 3%, Millas aéreas"
+P009,Préstamo Personal,Personal Loan,Préstamo personal sin garantía hasta 5 años plazo con tasa competitiva.,12.5,0,0,"Aprobación rápida, Sin garantía, Plazo flexible"
+P010,Préstamo Hipotecario,Mortgage,Préstamo hipotecario para compra de vivienda hasta 30 años plazo.,8.5,0,0,"Hasta 90% financiamiento, Plazo 30 años, Tasa fija o variable"
+P011,Préstamo Vehículo,Auto Loan,Préstamo para compra de vehículo nuevo o usado hasta 7 años plazo.,10.5,0,0,"Hasta 80% financiamiento, Seguro incluido, Plazo 7 años"
+P012,Línea de Crédito Empresarial,Business Line of Credit,Línea de crédito rotativa para empresas con límite flexible.,14.0,0,30,"Límite flexible, Uso rotativo, Acceso inmediato"
+P013,Cuenta Nómina,Payroll Account,Cuenta especial para recepción de salario con beneficios adicionales.,0.3,0,0,"Sin comisiones, Adelanto de nómina, Seguros incluidos"
+P014,Cuenta Inversión,Investment Account,Cuenta para inversión en fondos mutuos y valores con asesoría especializada.,0.0,50000,20,"Asesoría especializada, Fondos mutuos, Acceso a mercados"
+P015,Seguro Vida,Life Insurance,Seguro de vida con cobertura amplia y beneficios adicionales.,0.0,0,35,"Cobertura amplia, Beneficios adicionales, Asistencia médica"
+

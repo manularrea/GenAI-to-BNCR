@@ -1,0 +1,32 @@
+transaction_id,account_id,transaction_date,transaction_type,amount,merchant,category,description,fraud_flag
+TXN001,ACC12345,2024-01-15 09:23:45,debit,45.50,Supermercado La Colonia,Groceries,Compra de alimentos,0
+TXN002,ACC12345,2024-01-15 14:32:10,debit,120.00,Gasolinera Uno,Gas,Combustible,0
+TXN003,ACC12345,2024-01-16 10:15:30,credit,2500.00,Depósito Nómina,Salary,Salario mensual,0
+TXN004,ACC12345,2024-01-17 16:45:22,debit,85.75,Restaurante El Jardín,Dining,Almuerzo,0
+TXN005,ACC12345,2024-01-18 11:20:15,debit,350.00,Farmacia San José,Healthcare,Medicamentos,0
+TXN006,ACC67890,2024-01-15 08:30:00,debit,25.00,Café Central,Dining,Desayuno,0
+TXN007,ACC67890,2024-01-15 19:45:30,debit,1200.00,Tienda Electrónica,Electronics,Compra de laptop,0
+TXN008,ACC67890,2024-01-16 09:00:00,credit,3500.00,Transferencia,Transfer,Transferencia recibida,0
+TXN009,ACC67890,2024-01-17 15:30:45,debit,450.00,Clínica Médica,Healthcare,Consulta médica,0
+TXN010,ACC67890,2024-01-18 12:15:20,debit,75.50,Librería Nacional,Shopping,Compra de libros,0
+TXN011,ACC11111,2024-01-15 22:30:15,debit,2500.00,Casino Online,Gambling,Apuesta en línea,1
+TXN012,ACC11111,2024-01-15 22:35:20,debit,3000.00,Casino Online,Gambling,Apuesta en línea,1
+TXN013,ACC11111,2024-01-15 22:40:45,debit,5000.00,Transferencia Internacional,Transfer,Transferencia sospechosa,1
+TXN014,ACC22222,2024-01-16 03:15:30,debit,8000.00,Tienda Extranjera,Shopping,Compra en país no habitual,1
+TXN015,ACC22222,2024-01-16 03:20:45,debit,7500.00,Tienda Extranjera,Shopping,Compra en país no habitual,1
+TXN016,ACC33333,2024-01-17 10:30:00,debit,150.00,Supermercado,Groceries,Compra normal,0
+TXN017,ACC33333,2024-01-17 14:45:30,debit,200.00,Restaurante,Dining,Almuerzo,0
+TXN018,ACC33333,2024-01-18 09:15:20,credit,4000.00,Depósito,Salary,Salario,0
+TXN019,ACC44444,2024-01-15 11:30:45,debit,500.00,Pago Servicios,Utilities,Electricidad,0
+TXN020,ACC44444,2024-01-16 13:20:30,debit,300.00,Pago Servicios,Utilities,Agua,0
+TXN021,ACC55555,2024-01-15 16:45:00,debit,1500.00,Alquiler,Rent,Pago mensual alquiler,0
+TXN022,ACC55555,2024-01-17 10:00:00,credit,5000.00,Depósito,Salary,Salario mensual,0
+TXN023,ACC55555,2024-01-18 15:30:20,debit,250.00,Supermercado,Groceries,Compra semanal,0
+TXN024,ACC66666,2024-01-16 20:15:45,debit,10000.00,Transferencia,Transfer,Transferencia inusual,1
+TXN025,ACC66666,2024-01-16 20:20:30,debit,9500.00,Transferencia,Transfer,Transferencia inusual,1
+TXN026,ACC77777,2024-01-15 12:30:00,debit,100.00,Tienda Ropa,Shopping,Compra de ropa,0
+TXN027,ACC77777,2024-01-16 14:45:20,debit,180.00,Cine,Entertainment,Boletos de cine,0
+TXN028,ACC77777,2024-01-17 11:20:30,credit,3000.00,Depósito,Salary,Salario,0
+TXN029,ACC88888,2024-01-15 09:00:00,debit,50.00,Panadería,Groceries,Desayuno,0
+TXN030,ACC88888,2024-01-16 10:30:45,debit,400.00,Gimnasio,Fitness,Membresía mensual,0
+
