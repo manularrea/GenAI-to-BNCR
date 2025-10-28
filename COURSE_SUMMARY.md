@@ -190,22 +190,6 @@ All listed in `requirements.txt`:
 
 ---
 
-## 💰 Cost Estimation
-
-**Per student for entire course:** $50-100 USD
-
-Breakdown:
-- Labs 05-09 (Basic): ~$10-20
-- Labs 10-15 (Intermediate): ~$20-40
-- Labs 16-20 (Advanced): ~$20-40
-
-**Cost optimization tips:**
-- Use GPT-3.5 for development
-- Implement caching
-- Limit max_tokens
-- Monitor usage
-
----
 
 ## 🔒 Security & Compliance
 
@@ -240,7 +224,7 @@ All materials follow banking security best practices:
 ## 🤝 Support
 
 **Instructor:**  
-Manuela Larrea  
+Manuela Larrea Gomez
 Email: manuela.larrea@idataglobal.com
 
 **Organization:**  
@@ -284,25 +268,25 @@ Upon successful completion of the course, participants will have:
 
 ## 📅 Course Timeline
 
-**Total Duration:** 4 weeks
+**Total Duration:** 5 weeks
 
-**Week 1 (Sessions 5-9):**
+**Week 2 (Sessions 5-9):**
 - Azure OpenAI fundamentals
 - Prompt engineering
 - Function calling
 - Embeddings
 
-**Week 2 (Sessions 10-12):**
+**Week 3 (Sessions 10-12):**
 - RAG implementation
 - Azure AI Search
 - Content moderation
 
-**Week 3 (Sessions 13-15):**
+**Week 4 (Sessions 13-15):**
 - Fine-tuning
 - Multimodal AI
 - Agent frameworks
 
-**Week 4 (Sessions 16-20):**
+**Week 5 (Sessions 16-20):**
 - Production deployment
 - Testing & evaluation
 - Ethics & optimization
@@ -336,7 +320,7 @@ Participants can:
 ## 📞 Contact Information
 
 **Lead Instructor:**
-- Name: Manuela Larrea
+- Name: Manuela Larrea Gomez
 - Email: manuela.larrea@idataglobal.com
 - Organization: iData Global
 
@@ -355,7 +339,7 @@ Thank you for choosing this course. We're excited to help BNCR implement cutting
 ---
 
 **Package Version:** 1.0.0  
-**Last Updated:** January 27, 2025  
+**Last Updated:** October, 2025  
 **Package Size:** ~63 KB (compressed)  
 **Uncompressed Size:** ~500 KB
 
